@@ -160,7 +160,7 @@ const isValidAnagramRef = (str1,str2) => {
 }
 
 /*
- Restituisce le coppie di numeri che sommati restituiscono 0;
+ Restituisce le coppie di numeri che sommati restituiscono 0; sorted array;
 */
 
 const sumIsZero = (arr) => {
@@ -193,7 +193,14 @@ const sumIsZeroRef = (arr) => {
     }
     return res == '' ? undefined : res;
 }
-
-
-
-
+/*
+ Restituisce il numero di valori unici nell'array; sorted array;
+*/
+/*
+const countUniqueValues = (arr) => {
+    firstPointer = 0;
+    secondPointer = 1;
+    while(arr.lenght > 0){
+        if(arr[firstPointer] == )
+    }
+}*/
