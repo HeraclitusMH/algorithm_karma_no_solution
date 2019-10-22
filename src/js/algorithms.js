@@ -26,15 +26,14 @@ const sommatoryWithFormulaTiming = (n) => {
 
 let person = [
     {
-        firstName:'Tiziano',
-        lastName:'Trenta'
+        firstName:'Martin',
+        lastName:'Heidegger'
     },
     {
-        firstName:'Alvaro',
-        lastName:'Soleir'
+        firstName:'Friedrich',
+        lastName:'Nietzsche'
     }
-
-    ];
+];
 
 const testAccessObject = (object) => {
     console.log(Object.entries(object));
@@ -112,6 +111,7 @@ const samePowRef2 = (arr1,arr2) => {
 /*
  Restituisce true se le due parole sono anagrammi
 */
+
 const isValidAnagram = (str1,str2) => {
     if (str1.length !== str2.length){
         return false;
@@ -193,14 +193,82 @@ const sumIsZeroRef = (arr) => {
     }
     return res == '' ? undefined : res;
 }
+
 /*
  Restituisce il numero di valori unici nell'array; sorted array;
 */
+
 /*
-const countUniqueValues = (arr) => {
-    firstPointer = 0;
-    secondPointer = 1;
-    while(arr.lenght > 0){
-        if(arr[firstPointer] == )
+ Frequecy Counter
+*/
+
+const countUniqueValuesFq = (arr) => {
+    let frequencyCounter = {};
+    for (let val of arr){
+       if(frequencyCounter[val]){
+        frequencyCounter[val] += 1 
+       } else {
+        frequencyCounter[val] = 1;
+       }  
     }
-}*/
+    return Object.keys(frequencyCounter).length;
+}
+
+/*
+ Multiple Pointers
+*/
+
+const countUniqueValuesMp = (arr) => {
+    if(arr.length == 0){
+         return 0;
+        }
+    let i = 0;
+    for (let j = 1; j < arr.length; j++){
+        if (arr[i] !== arr[j]){
+            i++;
+            arr[i] = arr[j];
+        }
+    }
+    return i+1;
+}
+
+/*
+ Accetta un array di interi e un numero. La funzione calcola la massima somma data da n numeri
+ consecutivi nell'array
+*/
+
+const maxSubarraySum = (arr,n) => {
+    if (n > arr.length){
+        return null;
+    }
+    let maxSum = -Infinity;
+    for (let i = 0; i < arr.length - n + 1; i++){
+        let currentSum = 0;
+        for(let j = 0; j < n; j++){
+           currentSum += arr[i+j];
+        }
+        currentSum > maxSum ? maxSum = currentSum : currentSum;
+    }
+return maxSum;
+}
+
+/*
+ Sliding Window Pattern
+*/
+
+const maxSubarraySumRef = (arr,n) => {
+    if (n > arr.length){
+        return null;
+    }
+    let maxSum = 0;
+    for (let i = 0; i < n; i++){
+        maxSum += arr[i];
+    }
+    let tempSum = maxSum;
+    for (let i = n; i < arr.length; i++){
+        tempSum = tempSum - arr[i-n] + arr[i];
+        tempSum > maxSum ? maxSum = tempSum : tempSum;
+    }
+    return maxSum;
+}
+

@@ -1,4 +1,4 @@
-describe('sumIsZero', function () {
+describe('sumIsZero ||||', function () {
 
     it('all valid pair', function () {
         const arr = [-3,-2,-1,0,1,2,3] ;
@@ -49,5 +49,4 @@ describe('sumIsZero', function () {
         const arr = [-7,-2,-1,0,1,5,7] ;
         expect(sumIsZeroRef(arr)).toBe('-7,7;-1,1;');
     });
-
 });

@@ -1,4 +1,4 @@
-describe('Is valid anagram', function () {
+describe('Is valid anagram ||||', function () {
 
     it('valid anagram', function () {
         const word1 = 'karma'
