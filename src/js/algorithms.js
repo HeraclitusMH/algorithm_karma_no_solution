@@ -175,7 +175,7 @@ const sumIsZero = (arr) => {
     }
     
     return res == '' ? undefined : res;
-}
+};
 
 const sumIsZeroRef = (arr) => {
     let res = '';

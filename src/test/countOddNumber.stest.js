@@ -24,8 +24,4 @@ describe('Collect odd numbers||||', function () {
         let arr = [3,47,53,17,21];
         expect(collectOddNumbers(arr)).toEqual([3,47,53,17,21]);
     });
-
-
-
-
 });
