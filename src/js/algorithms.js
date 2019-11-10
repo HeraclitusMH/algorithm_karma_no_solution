@@ -273,7 +273,7 @@ const maxSubarraySumRef = (arr,n) => {
 };
 
 /*
- Return the factorial, made with recursion strategy
+ Return the factorial, made with recursion
 */
 
 const factorial = (num) => {
@@ -281,4 +281,20 @@ const factorial = (num) => {
         return 1;
     }
      return num * factorial(num-1);
+};
+
+/*
+ Return the odds numbers, made with pure recrusion
+*/
+
+const collectOddNumbers = (arr) => {
+    let newArr = [];
+    if (arr.length === 0){
+        return newArr;
+    }
+    if (arr[0]%2 !== 0){
+        newArr.push(arr[0]);
+    }
+    newArr = newArr.concat(collectOddNumbers(arr.slice(1)));
+    return newArr;
 };
