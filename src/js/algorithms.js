@@ -65,7 +65,7 @@ const samePow = (arr1,arr2) => {
         }
     }
     return res;
-}
+};
 
 const samePowRef = (arr1,arr2) => {
     if (arr1.length !== arr2.length){
@@ -88,7 +88,7 @@ const samePowRef = (arr1,arr2) => {
         }
     }
     return true;
-}
+};
 
 const samePowRef2 = (arr1,arr2) => {
     if (arr1.length !== arr2.length){
@@ -106,7 +106,7 @@ const samePowRef2 = (arr1,arr2) => {
         }
     }
     return true;
-}
+};
 
 /*
  Restituisce true se le due parole sono anagrammi
@@ -137,7 +137,7 @@ const isValidAnagram = (str1,str2) => {
         }
     }
     return true;
-}
+};
 
 const isValidAnagramRef = (str1,str2) => {
     if (str1.length !== str2.length){
@@ -157,7 +157,7 @@ const isValidAnagramRef = (str1,str2) => {
         }
     }
     return true;
-}
+};
 
 /*
  Restituisce le coppie di numeri che sommati restituiscono 0; sorted array;
@@ -192,7 +192,7 @@ const sumIsZeroRef = (arr) => {
         }
     }
     return res == '' ? undefined : res;
-}
+};
 
 /*
  Restituisce il numero di valori unici nell'array; sorted array;
@@ -212,7 +212,7 @@ const countUniqueValuesFq = (arr) => {
        }  
     }
     return Object.keys(frequencyCounter).length;
-}
+};
 
 /*
  Multiple Pointers
@@ -230,7 +230,7 @@ const countUniqueValuesMp = (arr) => {
         }
     }
     return i+1;
-}
+};
 
 /*
  Accetta un array di interi e un numero. La funzione calcola la massima somma data da n numeri
@@ -250,7 +250,7 @@ const maxSubarraySum = (arr,n) => {
         currentSum > maxSum ? maxSum = currentSum : currentSum;
     }
 return maxSum;
-}
+};
 
 /*
  Sliding Window Pattern
@@ -270,5 +270,15 @@ const maxSubarraySumRef = (arr,n) => {
         tempSum > maxSum ? maxSum = tempSum : tempSum;
     }
     return maxSum;
-}
+};
 
+/*
+ Return the factorial, made with recursion strategy
+*/
+
+const factorial = (num) => {
+    if (num === 1 || num === 0){
+        return 1;
+    }
+     return num * factorial(num-1);
+};
