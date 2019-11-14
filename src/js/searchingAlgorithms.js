@@ -32,12 +32,8 @@ const linearSearchIndex = (arr,element) => {
 
 /*
  Accepts a sorted array and a value.
- Search number with binary searching
+ Search number with binary searching, return the index
 */
-
-const intController = (a,b) => {
-    return a == b;
-}
 
 const binarySearch = (arr,val) => {
     let left = 0;
@@ -52,15 +48,3 @@ const binarySearch = (arr,val) => {
     return -1;
 }
 
-function binarySearch2(arr,val,controller) {
-    let left = 0;
-    let right = arr.length;
-    do {
-        let mid = parseInt((left+right)/2);
-        if(controller(arr[mid],val)){
-            return mid;
-        }
-        arr[mid] > val ?  right = mid : left = mid;
-    } while (left < right);
-    return -1;
-}
