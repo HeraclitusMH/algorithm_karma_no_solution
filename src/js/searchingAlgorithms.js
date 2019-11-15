@@ -30,3 +30,21 @@ const linearSearchIndex = (arr,element) => {
     return -1;
 };
 
+/*
+ Accepts a sorted array and a value.
+ Search number with binary searching, return the index
+*/
+
+const binarySearch = (arr,val) => {
+    let left = 0;
+    let right = arr.length;
+    do {
+        let mid = parseInt((left+right)/2);
+        if(arr[mid] == val){
+            return mid;
+        }
+        arr[mid] > val ?  right = mid : left = mid;
+    } while (left < right);
+    return -1;
+}
+
