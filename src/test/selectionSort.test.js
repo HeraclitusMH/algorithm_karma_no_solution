@@ -1,6 +1,6 @@
 describe('Selection Sort||||', function () {
     
-   /* it('unordered list', function () {
+    it('unordered list', function () {
         const arr = [4,1,6,2,3];
         expect(selectionSort(arr)).toEqual([1,2,3,4,6]);
     });
@@ -18,7 +18,7 @@ describe('Selection Sort||||', function () {
     it('one element array', function () {
         const arr = [1];
         expect(selectionSort(arr)).toEqual([1]);
-    }); */
+    }); 
 
     it('negative numbers', function () {
         const arr = [-65,-101,6,3,8,2];

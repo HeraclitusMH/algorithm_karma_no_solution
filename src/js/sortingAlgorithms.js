@@ -24,3 +24,18 @@ const selectionSort = (arr) => {
     }
     return arr;
 }
+
+const insertionSort = (arr) => {
+    for (let i=1;i<arr.length;i++){
+        let x = arr[i];
+        let j = i;
+        if(arr[i] <= arr[j - 1]){
+            while (arr[i] < arr[j - 1] ){
+                j--;
+            }
+            arr.splice(i, 1);
+            arr.splice(j, 0, x);
+        }
+    }
+    return arr;
+}
