@@ -1,46 +1,3 @@
-const sommatoryWithLoop = (n) => {
-    let total = 0;
-    for (let i = 1; i <= n; i++) {
-        total += i;
-    }
-    return total;
-};
-
-const sommatoryWithLoopTiming= (n) => {
-    let t1 = performance.now();
-    sommatoryWithLoop(n);
-    let t2 = performance.now();
-    console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`);
-};
-
-const sommatoryWithFormula = (n) => {
-    return n * (n + 1) / 2;
-};
-
-const sommatoryWithFormulaTiming = (n) => {
-    let time1 = performance.now();
-    sommatoryWithFormula(n);
-    let time2 = performance.now();
-    console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds.`);
-};
-
-let person = [
-    {
-        firstName:'Martin',
-        lastName:'Heidegger'
-    },
-    {
-        firstName:'Friedrich',
-        lastName:'Nietzsche'
-    }
-];
-
-const testAccessObject = (object) => {
-    console.log(Object.entries(object));
-    console.log('keys of 0->' + Object.keys(object[0]));
-    console.log(object[0]['firstName']);
-};
-
 /*
  Restituisce true se ad ogni elemento del primo Array corrisponde, con la stessa frequenza,
  un elemento del secondo array al quadrato.
@@ -66,6 +23,10 @@ const samePow = (arr1,arr2) => {
     }
     return res;
 };
+
+/*
+ Frequency counter pattern
+*/
 
 const samePowRef = (arr1,arr2) => {
     if (arr1.length !== arr2.length){
