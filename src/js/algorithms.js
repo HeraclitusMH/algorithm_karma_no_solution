@@ -259,3 +259,55 @@ const collectOddNumbers = (arr) => {
     newArr = newArr.concat(collectOddNumbers(arr.slice(1)));
     return newArr;
 };
+
+/*
+ Return the smallest missing number > 0
+*/
+
+const missingInteger = (arr) => {
+    let sorted = mergeSort(arr);
+    let findOne = binarySearch(sorted,1);
+    if(findOne !== -1){
+        let positiveArr = sorted.slice(findOne);
+        for(i = 0; i < positiveArr.length; i++){
+            if(positiveArr[i] + 1 !== positiveArr[i+1] ){
+                return positiveArr[i] + 1;
+            }
+        }
+    } else {
+        return 1
+    }
+}
+
+const missingIntegerRef = (arr) => {
+    let dictionary = {};
+    for (let val of arr){
+        dictionary[val] = val;
+    }
+    let length = Object.keys(dictionary).length;
+    for(var i = 1; i <= length; i++){
+        if(!dictionary[i]){
+            return i
+        }
+    }
+    if(length > 0){
+        return dictionary[i - 1] + 1
+    } else {
+        return 1;
+    }
+}
+
+const missingIntegerRefBetter = (arr) => {
+    let dictionary = {};
+    for (let val of arr){
+        dictionary[val] = val;
+    }
+    let i = 1;
+    while(true){
+        if(typeof dictionary[i] === "undefined"){
+            return i
+        }
+        i++;
+    }
+}
+

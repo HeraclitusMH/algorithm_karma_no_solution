@@ -1,4 +1,4 @@
-describe('Same Pow ||||', function () {
+describe('Same Pow', function () {
     
     it('right arrays', function () {
         const arr1 = [7,3,2,1,7,7,6];

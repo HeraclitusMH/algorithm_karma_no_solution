@@ -1,4 +1,4 @@
-describe('Factorial ||||', function () {
+describe('Factorial', function () {
 
     it('0 || Recursive Strategy', function () {
         expect(factorial(0)).toBe(1);

@@ -1,4 +1,4 @@
-describe('Insertion Sort ||||', function () {
+describe('Insertion Sort', function () {
     
     it('unordered list', function () {
         const arr = [4,1,6,2,3];

@@ -1,4 +1,4 @@
-describe('Binary search||||', function () {
+describe('Binary search', function () {
     
     it('case second half', function () {
         const arr = [1,4,6,8,15];
@@ -33,6 +33,16 @@ describe('Binary search||||', function () {
     it('vector with one element that doesn\'t exist', function () {
         const arr = [4];
         expect(binarySearch(arr,2)).toEqual(-1);
+    });
+
+     it('Negative numbers with element that doesn\'t exist', function () {
+        const arr = [-7,-3,1,4,6,8,15];
+        expect(binarySearch(arr,-2)).toEqual(-1);
+    }); 
+
+    it('element that doesn\'t exist', function () {
+        const arr = [1,4,6,8,15];
+        expect(binarySearch(arr,5)).toEqual(-1);
     });
 
 });

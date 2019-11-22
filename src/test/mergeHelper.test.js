@@ -1,4 +1,4 @@
-describe('Merge Helper ||||', function () {
+describe('Merge Helper', function () {
     
     it('two ordered list same length', function () {
         const arr1 = [1,5,7,9,15,17,44];

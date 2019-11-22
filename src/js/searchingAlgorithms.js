@@ -37,14 +37,14 @@ const linearSearchIndex = (arr,element) => {
 
 const binarySearch = (arr,val) => {
     let left = 0;
-    let right = arr.length;
+    let right = arr.length -1;
     do {
-        let mid = parseInt((left+right)/2);
+        let mid = Math.floor((left+right)/2);
         if(arr[mid] == val){
             return mid;
         }
-        arr[mid] > val ?  right = mid : left = mid;
-    } while (left < right);
+        arr[mid] > val ?  right = mid - 1 : left = mid + 1;
+    } while (left <= right);
     return -1;
 }
 

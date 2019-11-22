@@ -1,4 +1,4 @@
-describe('Linear Search ||||', function () {
+describe('Linear Search', function () {
 
     const Regions = [
         'Abruzzo','Basilicata','Calabria','Campania','Emilia Romagna',

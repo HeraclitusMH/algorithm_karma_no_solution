@@ -1,4 +1,4 @@
-describe('Collect odd numbers||||', function () {
+describe('Collect odd numbers', function () {
 
     it('ordered numbers || Pure recursion', function () {
         let arr = [1,2,3,4,5,6,7];

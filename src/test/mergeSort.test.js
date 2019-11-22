@@ -1,4 +1,4 @@
-describe('Merge Sort  ||||', function () {
+describe('Merge Sort', function () {
     
     it('unordered list', function () {
         const arr = [4,1,6,2,3];

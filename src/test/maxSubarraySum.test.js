@@ -1,4 +1,4 @@
-describe('Max subarray sum ||||', function () {
+describe('Max subarray sum', function () {
     
     it('no values , 2', function () {
         const arr1 = [];

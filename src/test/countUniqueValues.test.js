@@ -1,4 +1,4 @@
-describe('Count unique values ||||', function () {
+describe('Count unique values', function () {
     
     it('all different values || Frequency Counter', function () {
         const arr1 = [1,3,5,6,9,12,16];
